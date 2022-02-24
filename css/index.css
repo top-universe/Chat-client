@@ -1,0 +1,48 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+.hide{
+  display: none;
+}
+.errorMsg{
+  font-weight: 500;
+  color: rgb(56, 8, 8);
+}
+.container{
+  width:45rem;
+  margin:2% auto 5% auto;
+}
+.container .head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:5px;
+  color:#fff;
+  border-radius: 7px;
+}
+.container .head img{
+  width: 80px;
+}
+.login form, .reg form{
+  border:1.5px solid #949090;
+  padding: 10px;
+  margin:10px auto;
+  border-radius: 3px;
+}
+.login form{
+  background: #36D1DC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.login form span, #login-toggle{
+  cursor: pointer;
+  color:rgb(80, 4, 4);
+  font-weight: bold;
+}
+
+.reg form{
+  background:linear-gradient(to right, #36D1DC, #5B86E5); 
+}
