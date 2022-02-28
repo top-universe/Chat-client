@@ -14,10 +14,26 @@ const loginlink = document.querySelector("#login-toggle");
 login.addEventListener('submit',(e) =>{
   e.preventDefault();
 });
+localStorage.setItem('username',"pope francis");
+localStorage.setItem("password","user1234");
+
 btnSend.addEventListener('click', () =>{
   if(loginUser.value ==="" || loginPass === ""){
     logError.textContent= "Invalid Input";
     logError.classList.add('errorMsg');
+  }else{
+    let appUser = localStorage.getItem('username');
+    let userPass = localStorage.getItem('password');
+
+    if(loginUser.value.toLowerCase() === appUser.toLocaleLowerCase() && loginPass.value.toLocaleLowerCase()===
+      userPass.toLocaleLowerCase()){
+        alert("you're loggedIn!");
+        location.assign('/chat.html');
+      }else{
+        logError.classList.add('erroMsg');
+        logError.textContent="Invalid username and password."
+      }
+    
   }
 });
 
@@ -34,4 +50,6 @@ reglink.addEventListener('click',() =>{
 loginlink.addEventListener('click',() =>{
   register.classList.add('hide');
   login.classList.remove('hide');
-})
+});
+
+//session and localstorage 
